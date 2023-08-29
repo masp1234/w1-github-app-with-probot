@@ -1,5 +1,6 @@
 import { Probot } from "probot";
 import onWorkflowJob from './handlers/workflow_job'
+import onDeploymentProtectionRule from './handlers/deployment_protection_rule'
 
 export = (app: Probot) => {
   app.on("issues.opened", async (context) => {
@@ -10,5 +11,6 @@ export = (app: Probot) => {
   });
 
   onWorkflowJob(app);
+  onDeploymentProtectionRule(app);
 
 };

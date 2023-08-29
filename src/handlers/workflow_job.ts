@@ -1,7 +1,7 @@
 import { Probot } from 'probot';
 
-export default (probot: Probot) => {
-    probot.on("workflow_job", (context) => {
+export default (app: Probot) => {
+    app.on("workflow_job", (context) => {
         console.log(context.payload);
     })
 
