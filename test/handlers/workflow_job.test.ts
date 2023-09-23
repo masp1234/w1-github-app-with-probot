@@ -11,7 +11,7 @@ describe("just a test", () => {
                 githubToken: 'token'
             })}
         )
-        server.load(myProbotApp);
+        await server.load(myProbotApp);
     })
 
     it("should recieve a payload, and then log it out", async () => {

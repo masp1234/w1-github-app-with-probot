@@ -14,10 +14,4 @@ const dataSource = new DataSource({
     logging: false,
 })
 
-if (!dataSource.isInitialized) {
-    dataSource.initialize().then((datasource) => {
-        console.log(datasource.entityMetadatas)
-    }).catch((error) => console.log(error));
-    }
-
 export default dataSource

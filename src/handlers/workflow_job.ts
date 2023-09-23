@@ -9,7 +9,8 @@ export default (app: Probot) => {
     })
 
     app.on("workflow_job.in_progress" as any, async (context: Context<"workflow_job">) => {
-        const photo = await dataSource.manager.find(Photo)
+        const photos = await dataSource.manager.find(Photo)
+        console.log(photos);
         testfile.testfunction('this is the workflow_job name: ' + context.payload.workflow_job.name);
     })
 
