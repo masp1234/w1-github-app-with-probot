@@ -1,7 +1,7 @@
-import { Probot, Context } from 'probot';
+import { Probot} from 'probot';
 
 export default function(app: Probot) {
     app.on("deployment_protection_rule" as any, async(context) => {
-        //console.log(context.payload);
+        console.log(context.payload);
     })
 }
